@@ -85,7 +85,7 @@
 					</div>
 					<div class="py-1">
 						<div class="progress">
-							<div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+							<div class="progress-bar" role="progressbar" style="width: <?php echo $perc1;?>" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
 								<div class="progress-bar-title"><?php echo $skill1;?></div>
 								<span class="progress-bar-number"><?php echo $perc1;?></span>
 							</div>
@@ -93,7 +93,7 @@
 					</div>
 					<div class="py-1">
 						<div class="progress">
-							<div class="progress-bar" role="progressbar" style="width:85%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+							<div class="progress-bar" role="progressbar" style="width:<?php echo $perc2;?>" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
 								<div class="progress-bar-title"><?php echo $skill2;?></div>
 								<span class="progress-bar-number"><?php echo $perc2;?></span>
 							</div>
@@ -101,7 +101,7 @@
 					</div>
 					<div class="py-1">
 						<div class="progress">
-							<div class="progress-bar" role="progressbar" style="width:6%" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100">
+							<div class="progress-bar" role="progressbar" style="width:<?php echo $perc3;?>" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100">
 								<div class="progress-bar-title"><?php echo $skill3;?></div>
 								<span class="progress-bar-number"><?php echo $perc3;?></span>
 							</div>
