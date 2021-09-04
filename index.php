@@ -1,22 +1,45 @@
 <!doctype html>
 <html lang="en">
 	<?php 
+		
 		$classCode = "ASE 230";
 		$classYear = "2021";
 		$classSeason = "Fall";
-		$profile1 = "Samuel Long";
-		$profile2 = "Nazrul Islam";
-		$profile3 = "Riyadh Khan";
-		$profile4 = "Niloy Islam";
-		$img1 = "images/profile.png";
-		$img2 = "https://bootdey.com/img/Content/avatar/avatar7.png";
-		$img3 = "https://bootdey.com/img/Content/avatar/avatar6.png";
-		$img4 = "https://bootdey.com/img/Content/avatar/avatar2.png";
-		$profile1job = "Student";
-		$profile2job = "UI Designer";
-		$profile3job = "Developer";
-		$profile4job = "Marketing Manager";
+		
+		
+		
+		$MasterArray = array(
+			array("Samuel Long", "Munene Gatobu", "Pringus McDingus"),
+			array("Programmer", "Dedicated Human", "Developer"),
+			array("images/profile.png", "images/profile2.png", "https://bootdey.com/img/Content/avatar/avatar6.png"),
+			array("3", "2", "4"),
+			array("", "", ""),  //facebook
+			array("", "", ""),	//instagram
+			array("", "", ""),	//linkedin
+			array("", "", ""),	//twitter
+			array("Web Developer/Programmer", "Remain a Human", "Application Developer"),
+			array("SpaceX", "Amazon Warehouse", "Google"),
+			array("longs6@mymail.nku.edu", "gatobum1@mymail.nku.edu", "developermcdingus@mymail.nku.edu"),
+			array("My introduction just ended.", "I am a hooman.", "I am a developer. I am still developing"),
+			array("Hello there!", "I'm a happy little accident.", "Dev dev dev dev dev"),
+			array("Mad Max: Fury Road is guud.", "Wee woo wee woo", "Developing more code NOW!"),
+			array("Networking", "Eating", "Developing code"),
+			array("System Administration", "Sleeping", "Programming"),
+			array("Programming", "Breathing", "Designing programs"),
+			array("80", "10", "50"),
+			array("70", "12", "50"),
+			array("72", "100", "50"),
+			);
 	?>
+	
+	
+	for MasterArray[0][$loop]
+	for MasterArray[1][$loop]
+	
+	
+	
+	
+	
 	<head>
 	<!-- https://www.bootdey.com/snippets/view/single-advisor-profile#html -->
 	<meta charset="utf-8">
@@ -26,6 +49,7 @@
 	<link rel="stylesheet" href="assets/css/index.css" />
 	<title><?php echo $classCode;?> - class of <?php echo "$classSeason $classYear";?></title>
 	</head>
+	
 	
 	<body>
 		<div class="container text-center">
@@ -42,73 +66,29 @@
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<!-- Single Advisor-->
-				<div class="col-12 col-sm-6 col-lg-3">
-					<div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-						<!-- Team Thumb-->
-						<div class="advisor_thumb"><a href="samuel_long.php"><img src="<?php echo $img1; ?>" alt=""></a>
-							<!-- Social Info-->
-							<div class="social-info"><a href="samuel_long.php"><i class="fa fa-facebook"></i></a><a href="samuel_long.php"><i class="fa fa-twitter"></i></a><a href="samuel_long.php"><i class="fa fa-linkedin"></i></a></div>
-						</div>
-						<!-- Team Details-->
-						<div class="single_advisor_details_info">
-							<h6>
-								<?php echo $profile1;?>
-							</h6>
-							<p class="designation">
-								<?php echo $profile1job;?>
-							</p>
-						</div>
-					</div>
-				</div>
-				<!-- Single Advisor-->
-				<div class="col-12 col-sm-6 col-lg-3">
-					<div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-						<!-- Team Thumb-->
-						<div class="advisor_thumb"><a href="samuel_long.php"><img src="<?php echo $img2; ?>" alt=""></a>
-							<!-- Social Info-->
-							<div class="social-info"><a href="samuel_long.php"><i class="fa fa-facebook"></i></a><a href="samuel_long.php"><i class="fa fa-twitter"></i></a><a href="samuel_long.php"><i class="fa fa-linkedin"></i></a></div>
-						</div>
-						<!-- Team Details-->
-						<div class="single_advisor_details_info">
-							<h6><?php echo $profile2; ?></h6>
-							<p class="designation"><?php echo $profile2job;?></p>
-						</div>
-					</div>
-				</div>
+			
+			
+			<?php= "
+			<div class="row">	
 				<!-- Single Advisor-->
 				<div class="col-12 col-sm-6 col-lg-3">
 					<div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
 						<!-- Team Thumb-->
-						<div class="advisor_thumb"><a href="samuel_long.php"><img src="<?php echo $img3;?>" alt=""></a>
+						<div class="advisor_thumb"><a href="detail.php"><img src="<?php echo $img3;?>" alt=""></a>
 							<!-- Social Info-->
-							<div class="social-info"><a href="samuel_long.php"><i class="fa fa-facebook"></i></a><a href="samuel_long.php"><i class="fa fa-twitter"></i></a><a href="samuel_long.php"><i class="fa fa-linkedin"></i></a></div>
+							<div class="social-info"><a href="facebook"><i class="fa fa-facebook"></i></a><a href="twitter"><i class="fa fa-twitter"></i></a><a href="linkedin"><i class="fa fa-linkedin"></i></a></div>
 						</div>
 						<!-- Team Details-->
 						<div class="single_advisor_details_info">
-							<h6><?php echo $profile3;?></h6>
-							<p class="designation"><?php echo $profile3job;?></p>
-						</div>
-					</div>
-				</div>
-				<!-- Single Advisor-->
-				<div class="col-12 col-sm-6 col-lg-3">
-					<div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-						<!-- Team Thumb-->
-						<div class="advisor_thumb"><a href="samuel_long.php"><img src="<?php echo $img4;?>" alt=""></a>
-							<!-- Social Info-->
-							<div class="social-info"><a href="samuel_long.php"><i class="fa fa-facebook"></i></a><a href="samuel_long.php"><i class="fa fa-twitter"></i></a><a href="samuel_long.php"><i class="fa fa-linkedin"></i></a></div>
-						</div>
-						<!-- Team Details-->
-						<div class="single_advisor_details_info">
-							<h6><?php echo $profile4;?></h6>
-							<p class="designation"><?php echo $profile4job;?></p>
+							<h6>name</h6>
+							<p class="designation">job</p>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+			"?>
+		
+		</div>		
 		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 	</body>

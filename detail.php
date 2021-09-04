@@ -2,25 +2,10 @@
 <html lang="en">
 	<head>
 		<?php
-			$classCode = "ASE 230";
-			$name = "Samuel Long";
-			$img = "images/profile.png";
-			$facebook = "https://www.facebook.com/";
-			$twitter = "https://www.twitter.com/";
-			$instragram = "https://www.instagram.com/";
-			$linkedin = "https://www.linkedin.com/";
-			$dream = "Web Developer/Backend-Programmer";
-			$dreamCo = "SpaceX";
-			$email = "longs6@mymail.nku.edu";
-			$intro = "Living is changing. Unliving things do not change, at least not by their own will. So if you want to live, you must be prepared to let (or make) yourself change. It sounds easy to do, but can be very dificult because change often comes with discomfort and that is why learning to embrace that discomfort is so powerful.";
-			$quote = "Once someone decides to stop changing, they become stagnated in the past and the present passes them by.";
-			$funfact = "It is a general trend that the older one gets, the more set in their ways they become and consequently the less they are able to or are willing to accept and adhere to the new.";
-			$skill1 = "Networking";
-			$skill2 = "System Administration";
-			$skill3 = "Programming";
-			$perc1 = "80%";
-			$perc2 = "70%";
-			$perc3 = "72%";
+		#create an array for each person, containing all of their data. Make the page pull data from said arrays based on the GET value recieved (will change depending on the person).
+		#
+		#
+			
 		?>
 		<!-- https://www.bootdey.com/snippets/view/team-user-resume#html -->
 		<meta charset="utf-8">
