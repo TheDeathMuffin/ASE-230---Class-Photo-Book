@@ -6,39 +6,63 @@
 		$classYear = "2021";
 		$classSeason = "Fall";
 		
-		
-		
-		$MasterArray = array(
-			array("Samuel Long", "Munene Gatobu", "Pringus McDingus"),
-			array("Programmer", "Dedicated Human", "Developer"),
-			array("images/profile.png", "images/profile2.png", "https://bootdey.com/img/Content/avatar/avatar6.png"),
-			array("3", "2", "4"),
-			array("", "", ""),  //facebook
-			array("", "", ""),	//instagram
-			array("", "", ""),	//linkedin
-			array("", "", ""),	//twitter
-			array("Web Developer/Programmer", "Remain a Human", "Application Developer"),
-			array("SpaceX", "Amazon Warehouse", "Google"),
-			array("longs6@mymail.nku.edu", "gatobum1@mymail.nku.edu", "developermcdingus@mymail.nku.edu"),
-			array("My introduction just ended.", "I am a hooman.", "I am a developer. I am still developing"),
-			array("Hello there!", "I'm a happy little accident.", "Dev dev dev dev dev"),
-			array("Mad Max: Fury Road is guud.", "Wee woo wee woo", "Developing more code NOW!"),
-			array("Networking", "Eating", "Developing code"),
-			array("System Administration", "Sleeping", "Programming"),
-			array("Programming", "Breathing", "Designing programs"),
-			array("80", "10", "50"),
-			array("70", "12", "50"),
-			array("72", "100", "50"),
-			);
+		$masterArray = array(
+			"001"=>["ID"=>"001",
+				"name"=>"Samuel Long", 
+				"year"=>"3", 
+				"job"=>"Programmer", 
+				"img"=>"images/profile.png", 
+				"socialMedia"=>"https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley", 
+				"dProfession"=>"Programmer", 
+				"dCompany"=>"SpaceX", 
+				"email"=>"longs6@mymail.nku.edu", 
+				"intro"=>"My introduction just ended.", 
+				"quote"=>"Hello there!", 
+				"funfact"=>"\"Mad Max: Fury Road\" is guud.", 
+				"skills"=>[
+					["name"=>"Networking", "value"=>"80"],
+					["name"=>"System Administration", "value"=>"70"],
+					["name"=>"Programming", "value"=>"72"]
+				]
+			],
+			"002"=>["ID"=>"002",
+				"name"=>"Munene Gatobu", 
+				"year"=>"2", 
+				"job"=>"Real Human", 
+				"img"=>"images/profile2.png", 
+				"socialMedia"=>"https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley", 
+				"dProfession"=>"Remain a Human", 
+				"dCompany"=>"Amazon Warehouse", 
+				"email"=>"gatobum1@mymail.nku.edu", 
+				"intro"=>"I am a hooman.", 
+				"quote"=>"I'm a happy little accident.", 
+				"funfact"=>"Wee woo wee woo", 
+				"skills"=>[
+					["name"=>"Eating", "value"=>"10"],
+					["name"=>"Sleeping", "value"=>"12"],
+					["name"=>"Breathing", "value"=>"100"],
+					["name"=>"Crab Walking", "value"=>"70"]
+				]
+			],
+			"003"=>["ID"=>"003",
+				"name"=>"Pringus McDingus", 
+				"year"=>"4", 
+				"job"=>"Developer", 
+				"img"=>"https://bootdey.com/img/Content/avatar/avatar6.png", 
+				"socialMedia"=>"https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley", 
+				"dProfession"=>"Application Developer", 
+				"dCompany"=>"Google", 
+				"email"=>"developermcdingus@myemail.com", 
+				"intro"=>"I am a developer. I am still developing.", 
+				"quote"=>"Dev dev dev dev dev.", 
+				"funfact"=>"Developing more code NOW!", 
+				"skills"=>[
+					["name"=>"Developing Code", "value"=>"100"],
+					["name"=>"Coding", "value"=>"99"]
+				]
+			]
+		)	
 	?>
-	
-	
-	for MasterArray[0][$loop]
-	for MasterArray[1][$loop]
-	
-	
-	
-	
 	
 	<head>
 	<!-- https://www.bootdey.com/snippets/view/single-advisor-profile#html -->
@@ -47,13 +71,12 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 	<link rel="stylesheet" href="assets/css/index.css" />
-	<title><?php echo $classCode;?> - class of <?php echo "$classSeason $classYear";?></title>
+	<title><?= $classCode;?> - class of <?= "$classSeason $classYear";?></title>
 	</head>
-	
 	
 	<body>
 		<div class="container text-center">
-			<h1>This is <?php echo $classCode;?> - class of <?php echo $classSeason; ?> <?php echo $classYear ?></h1>
+			<h1>This is <?= $classCode;?> - class of <?= $classSeason; ?> <?= $classYear ?></h1>
 		</div>
 		<div class="container">
 			<div class="row justify-content-center">
@@ -66,28 +89,32 @@
 					</div>
 				</div>
 			</div>
-			
-			
-			<?php= "
 			<div class="row">	
-				<!-- Single Advisor-->
-				<div class="col-12 col-sm-6 col-lg-3">
-					<div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
-						<!-- Team Thumb-->
-						<div class="advisor_thumb"><a href="detail.php"><img src="<?php echo $img3;?>" alt=""></a>
-							<!-- Social Info-->
-							<div class="social-info"><a href="facebook"><i class="fa fa-facebook"></i></a><a href="twitter"><i class="fa fa-twitter"></i></a><a href="linkedin"><i class="fa fa-linkedin"></i></a></div>
-						</div>
-						<!-- Team Details-->
-						<div class="single_advisor_details_info">
-							<h6>name</h6>
-							<p class="designation">job</p>
+				<?php
+				foreach($masterArray as $currentArray) {          
+				?>
+					<!-- Single Advisor-->
+					<div class="col-12 col-sm-6 col-lg-3">
+						<div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+							<!-- Team Thumb-->
+							<div class="advisor_thumb"><a href="detail.php?ID=<?=$currentArray["ID"]?>"><img src="<?=$currentArray["img"];?>" alt=""></a>
+								<!-- Social Info-->
+								<div class="social-info"><a href="<?=$currentArray["socialMedia"];?>"><i class="fa fa-facebook"></i></a><a href="<?=$currentArray["socialMedia"];?>"><i class="fa fa-twitter"></i></a><a href="<?=$currentArray["socialMedia"];?>"><i class="fa fa-linkedin"></i></a></div>
+							</div>
+							<!-- Team Details-->
+							<?php
+							for($t=0;$t<$currentArray["year"];$t++) {
+							?>
+								<img src="images/year.png" alt="">
+							<?php } ?>
+							<div class="single_advisor_details_info">
+								<h6><?=$currentArray["name"];?></h6>
+								<p class="designation"><?=$currentArray["job"];?></p>
+							</div>
 						</div>
 					</div>
-				</div>
+				<?php } ?>
 			</div>
-			"?>
-		
 		</div>		
 		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
