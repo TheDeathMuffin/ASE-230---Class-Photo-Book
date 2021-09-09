@@ -1,67 +1,20 @@
 <!doctype html>
 <html lang="en">
 	<?php 
+		include 'data.php';
+		include 'functions.php';
+		function cardDisplay() {}
+		foreach($masterArray as $person){
+			[$ageYear, $ageMonth, $ageDay] = calculateAge($person["DOB"]);
+			echo "$ageYear $ageMonth $ageDay..... ";
+		}
 		
-		$classCode = "ASE 230";
-		$classYear = "2021";
-		$classSeason = "Fall";
 		
-		$masterArray = array(
-			"001"=>["ID"=>"001",
-				"name"=>"Samuel Long", 
-				"year"=>"3", 
-				"job"=>"Programmer", 
-				"img"=>"images/profile.png", 
-				"socialMedia"=>"https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley", 
-				"dProfession"=>"Programmer", 
-				"dCompany"=>"SpaceX", 
-				"email"=>"longs6@mymail.nku.edu", 
-				"intro"=>"My introduction just ended.", 
-				"quote"=>"Hello there!", 
-				"funfact"=>"\"Mad Max: Fury Road\" is guud.", 
-				"skills"=>[
-					["name"=>"Networking", "value"=>"80"],
-					["name"=>"System Administration", "value"=>"70"],
-					["name"=>"Programming", "value"=>"72"]
-				]
-			],
-			"002"=>["ID"=>"002",
-				"name"=>"Munene Gatobu", 
-				"year"=>"2", 
-				"job"=>"Real Human", 
-				"img"=>"images/profile2.png", 
-				"socialMedia"=>"https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley", 
-				"dProfession"=>"Remain a Human", 
-				"dCompany"=>"Amazon Warehouse", 
-				"email"=>"gatobum1@mymail.nku.edu", 
-				"intro"=>"I am a hooman.", 
-				"quote"=>"I'm a happy little accident.", 
-				"funfact"=>"Wee woo wee woo", 
-				"skills"=>[
-					["name"=>"Eating", "value"=>"10"],
-					["name"=>"Sleeping", "value"=>"12"],
-					["name"=>"Breathing", "value"=>"100"],
-					["name"=>"Crab Walking", "value"=>"70"]
-				]
-			],
-			"003"=>["ID"=>"003",
-				"name"=>"Pringus McDingus", 
-				"year"=>"4", 
-				"job"=>"Developer", 
-				"img"=>"https://bootdey.com/img/Content/avatar/avatar6.png", 
-				"socialMedia"=>"https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley", 
-				"dProfession"=>"Application Developer", 
-				"dCompany"=>"Google", 
-				"email"=>"developermcdingus@myemail.com", 
-				"intro"=>"I am a developer. I am still developing.", 
-				"quote"=>"Dev dev dev dev dev.", 
-				"funfact"=>"Developing more code NOW!", 
-				"skills"=>[
-					["name"=>"Developing Code", "value"=>"100"],
-					["name"=>"Coding", "value"=>"99"]
-				]
-			]
-		)	
+		#Create a function that displays a single card that has the parameters necessary for rendering the information 
+		#(either just pass in the user's ID or pass in all of the person's information (image, name, job, year, age information))
+	
+	
+	
 	?>
 	
 	<head>
