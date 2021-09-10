@@ -1,5 +1,6 @@
 	<?php 
-	#This file includes several variable definitions for general information as well as an associative array ($masterArray) containing associative arrays with each person's information.
+	#This file includes several variable definitions for general information as well as an associative array ($masterArray) containing associative arrays with each person's information. Contained within each student array
+	#is the student's ID, name, DOB, year of University, job, profile image, social media links, dream profession, dream company, email address, introduction paragraph, quote, fun fact, and a list of their skills and their corresponding skill values.
 	
 		$classCode = "ASE 230";
 		$classYear = "2021";

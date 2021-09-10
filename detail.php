@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
 	<?php 
-		include 'data.php';
-		include 'functions.php';
-		$i = $_GET["ID"];		
-		[$ageYear, $ageMonth, $ageDay] = calculateAge($masterArray[$i]["DOB"]);
+		include 'data.php';						#Loads data.php into file so that student data can be accessed.
+		include 'functions.php';				#Loads functions.php into file so that the calculateAge() function can be used.
+		$i = $_GET["ID"];						#$_GET["ID"] value stored in $i. This identifies the student that was selected in order to display the appropriate information.
+		[$ageYear, $ageMonth, $ageDay] = calculateAge($masterArray[$i]["DOB"]);				#Date of birth is calculated and returned into the values #ageYear, $ageMonth, and $ageDay. 
 	?>
 	<head>
 		<!-- https://www.bootdey.com/snippets/view/team-user-resume#html -->
