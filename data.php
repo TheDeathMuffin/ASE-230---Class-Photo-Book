@@ -5,7 +5,6 @@
 		$classCode = "ASE 230";
 		$classYear = "2021";
 		$classSeason = "Fall";
-		
 		$masterArray = array([
 	"name"=>"Samuel Long",
 	"DOB"=>"2001-8-15",
@@ -117,7 +116,7 @@
 	]],
 	
 	[
-	"name"=>"Munene gatobu",
+	"name"=>"Munene Gatobu",
 	"DOB"=>"2002-05-08",
 	"year"=>"2", 
 	"job"=>"Student", 
