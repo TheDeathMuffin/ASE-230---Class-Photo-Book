@@ -23,9 +23,9 @@
 	"quote"=>"We don’t make mistakes. We just have happy accidents. ~ Bob Ross", 
 	"funfact"=>"Mad Max: Fury Road is a good movie.", 
 	"skills"=>[
-		["Networking"=>"", "value"=>"80"],
+		["name"=>"Networking", "value"=>"80"],
 		["name"=>"Programming", "value"=>"70"],
-		["name"=>"Crab-walking", "value"=>"0"]
+		["name"=>"Crab-walking", "value"=>"15"]
 	]],
 
 	[
