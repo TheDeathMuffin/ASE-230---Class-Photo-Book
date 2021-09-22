@@ -3,7 +3,49 @@
 	<?php 
 		require('data.php');
 		require('functions.php');
-	?>
+	
+		function cardDisplay($x) {
+			require('data.php');
+			[$ageYear, $ageMonth, $ageDay] = calculateAge($masterArray[$x]["DOB"]);		
+			
+			while (true) {
+				if ($x == 0 || $x % 2 == 0) {
+					$color = '#545460';
+					break; }
+				$color = '#a40000';
+				break;
+			}
+			
+			switch ($masterArray[$x]["year"]){
+				case 1: $textYear = "Freshman";
+					break;
+				case 2: $textYear = "Sophomore";
+					break;
+				case 3: $textYear = "Junior";
+					break;
+				case 4: $textYear = "Senior";
+					break;
+				default:
+					$textYear = "Undefined";}
+		?>
+		
+		<!--Student Card-->
+		<div class="col-md-4 col-sm-6 col-xs-12 content b" style="height: 450px;">
+			<div class="shadow">
+				<div class="rounded shadow shadow shadow" style="background-color: <?=$color?>; padding: 15px; height: 90%;">
+					<a href="detail.php?Index=<?=$x?>"><center><img class="rounded-circle z-depth-2" alt="100x100" src="<?=$masterArray[$x]["img"]?>" style="width: 80%; margin-bottom: 12px; border: solid black 3px;"></center></a>
+					<h2 class="textlb"><?=$masterArray[$x]['name']?></h2>
+					<div class="textw">
+						<h5>Year: <?=$textYear?></h5>
+						<h5>Role: <?=$masterArray[$x]['job']?></h5>
+						<h5>Age: <?=$ageYear?></h5>
+					</div>
+				</div>
+			</div>
+		</div>
+			
+		<?php } ?>
+		
 	<head>
 		<title>ASE 230 - Our Class</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
@@ -27,53 +69,13 @@
 			<!--Student List Secondary Container-->
 			<div class="row" style="margin-left: 15%; margin-right: 15%; width: 70%; padding-top: 30px;">
 					
-					
-					
-					
-				<!--Student Card Container-->
+				<!--Loops Through the Main Array, Printing a Card per Student-->
 				<?php 
-					$i = 0;
-					for ($x = 0; $x <= 11; $x++) {
-					if ($i == 0 || $i == 2) {
-						$color = '#545460'; }
-					elseif ($i == 1 || $i == 3) {
-						$color = '#a40000'; $i = -1;}
-					$i++;
-					
-					[$ageYear, $ageMonth, $ageDay] = calculateAge($masterArray[$x]["DOB"]);
-					
-					switch ($masterArray[$x]["year"]){
-						case 1: $textYear = "Freshman";
-							break;
-						case 2: $textYear = "Sophomore";
-							break;
-						case 3: $textYear = "Junior";
-							break;
-						case 4: $textYear = "Senior";
-							break;
-						default:
-							$textYear = "Undefined";}
+					for ($x = 0; $x < count($masterArray); $x++) {
+						cardDisplay($x);
+					} 
 				?>
-				
-				<!--Student Card-->
-				<div class="col-md-4 col-sm-6 col-xs-12 content b" style="height: 450px;">
-					<div class="shadow">
-						<div class="rounded shadow shadow shadow" style="background-color: <?=$color?>; padding: 15px; height: 90%;">
-							<a href="detail.php?Index=<?=$x?>"><center><img class="rounded-circle z-depth-2" alt="100x100" src="<?=$masterArray[$x]["img"]?>" style="width: 80%; margin-bottom: 12px; border: solid black 3px;"></center></a>
-							<h2 class="textlb"><?=$masterArray[$x]['name']?></h2>
-							<div class="textw">
-								<h5>Year: <?=$textYear?></h5>
-								<h5>Role: <?=$masterArray[$x]['job']?></h5>
-								<h5>Age: <?=$ageYear?></h5>
-							</div>
-						</div>
-					</div>
-				</div>
-				<?php } ?>
 					
-					
-					
-
 				<!--Floating CreateStudent Button-->
 				<div class="rounded dg" style="position: fixed; left: 15px; bottom: 30px; padding: 10px;">
 					<a href="create.php" class="textlb" style="font-size: 130%;">Create Student</a>
