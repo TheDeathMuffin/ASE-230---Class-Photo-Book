@@ -1,12 +1,15 @@
 <!DOCTYPE HTML>
 <html lang="eng">
 	<?php 
-		require('data.php');
 		require('functions.php');
+		require('json_util.php');
+		$masterArray = readJSON('class.json');
 	
 		function cardDisplay($x) {
-			require('data.php');
-			[$ageYear, $ageMonth, $ageDay] = calculateAge($masterArray[$x]["DOB"]);		
+			
+			$masterArray = readJSON('class.json');
+			[$ageYear, $ageMonth, $ageDay] = calculateAge($masterArray[$x]["DOB"]);	
+			
 			
 			while (true) {
 				if ($x == 0 || $x % 2 == 0) {

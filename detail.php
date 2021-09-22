@@ -1,8 +1,9 @@
 <!DOCTYPE HTML>
 <html lang="eng" style="zoom: 100%;">
 	<?php 
-		require('data.php');
 		require('functions.php');
+		require('json_util.php');
+		$masterArray = readJSON('class.json');
 		$i = $_GET["Index"];
 		[$ageYear, $ageMonth, $ageDay] = calculateAge($masterArray[$i]["DOB"]);
 	?>
