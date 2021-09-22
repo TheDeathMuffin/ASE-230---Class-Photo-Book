@@ -5,9 +5,9 @@ function modifyPerson(){
 	$file = readJSON("class.json");
 	$index = $_GET['index'];
 	if($index <= count($file) && $index >= 0){
-		$file[$index]["name"] = "Beethoven";
+		$file[$index]["name"] = $_GET['name'];
 		saveJSON($file, "class.json");
-		return "User's name has been changed to Beethoven";
+		return "User's name has been changed to ".$_GET['name'];
 	} else {
 		return "Please modify a valid user";
 	}

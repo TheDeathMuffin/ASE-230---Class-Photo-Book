@@ -3,11 +3,13 @@
 require("json_util.php");
 function deletePerson($index){
 	$file = readJSON("class.json");
-	if($index <= count($file) && $index >= 0){
+	if($index < count($file) && $index >= 0){
 		array_splice($file, $index, 1);
 		saveJSON($file, "class.json");
 		return "The specified user has been removed";
-	} else {
+	} 
+	else 
+	{
 		return "Please enter a valid index";
 	}
 }
@@ -15,6 +17,6 @@ function deletePerson($index){
 	<head>
 	</head>
 	<body>
-		<h1><?php echo deletePerson(3);?></h1>
+		<h1><?php echo deletePerson($_GET['index']);?></h1>
 	</body>
 </html>

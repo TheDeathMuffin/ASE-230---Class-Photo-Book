@@ -36,7 +36,7 @@
 		<div class="col-md-4 col-sm-6 col-xs-12 content b" style="height: 450px;">
 			<div class="shadow">
 				<div class="rounded shadow shadow shadow" style="background-color: <?=$color?>; padding: 15px; height: 90%;">
-					<a href="detail.php?Index=<?=$x?>"><center><img class="rounded-circle z-depth-2" alt="100x100" src="<?=$masterArray[$x]["img"]?>" style="width: 80%; margin-bottom: 12px; border: solid black 3px;"></center></a>
+					<a href="detail.php?index=<?=$x?>"><center><img class="rounded-circle z-depth-2" alt="100x100" src="<?=$masterArray[$x]["img"]?>" style="width: 80%; margin-bottom: 12px; border: solid black 3px;"></center></a>
 					<h2 class="textlb"><?=$masterArray[$x]['name']?></h2>
 					<div class="textw">
 						<h5>Year: <?=$textYear?></h5>

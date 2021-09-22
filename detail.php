@@ -4,7 +4,7 @@
 		require('functions.php');
 		require('json_util.php');
 		$masterArray = readJSON('class.json');
-		$i = $_GET["Index"];
+		$i = $_GET["index"];
 		[$ageYear, $ageMonth, $ageDay] = calculateAge($masterArray[$i]["DOB"]);
 	?>
 	<head>
@@ -76,6 +76,9 @@
 				</div>
 			</div>
 		</div>
+		<h5><a href="index.php"><?=" Back To Home ";?></a></h5>
+		<h5><a href="modify.php?index=<?=$i?>&name=Lewis"><?=" Modify Person ";?></a></h5>
+		<h5><a href="delete.php?index=<?=$i?>"><?=" Delete Person ";?></a></h5>
 		
 		<!--Footer Bar-->
 		<div class="lb" style="padding: 10px; margin-top: 5px; height: 20px;"><h1 style=""></h1></div>
