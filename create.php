@@ -3,9 +3,13 @@
 	<?php
 		require("json_util.php");
 		function createPerson($index){
+			//function is used to read the class.json file and save the information into an associative array. 
 			$file = readJSON("class.json");
+			//Basic if conditional used to check if the index provided is a valid index. 
 			if($index <= count($file) && $index >= 0){
+				//Duplicates information from the specified index and adds that duplicate info to the end of the array.
 				$file[] = $file[$index];
+				//function is used to save the edited array information to class.json
 				saveJSON($file, "class.json");
 				return "User at index 0 has been duplicated."; } 
 			else { return "ERROR: Please enter a valid index!"; }

@@ -3,14 +3,16 @@
 	<?php 
 		require('functions.php');
 		require('json_util.php');
+		//Creates an associative array with all the information from class.json
 		$masterArray = readJSON('class.json');
-	
+		//function that displays a card with information from the masterArray. 
 		function cardDisplay($x) {
-			
+			//function is used to write the from class.json into a masterArray.
 			$masterArray = readJSON('class.json');
+			//sets certain variables to a person's date of birth based on the index they're located in the masterArray
 			[$ageYear, $ageMonth, $ageDay] = calculateAge($masterArray[$x]["DOB"]);	
 			
-			
+			//Loop that's used to alternate card colors on the index page. 
 			while (true) {
 				if ($x == 0 || $x % 2 == 0) {
 					$color = '#545460';
@@ -18,7 +20,8 @@
 				$color = '#a40000';
 				break;
 			}
-			
+			//Switch statement is used to check a person's year and adjust their card text
+			//to include their year information
 			switch ($masterArray[$x]["year"]){
 				case 1: $textYear = "Freshman";
 					break;

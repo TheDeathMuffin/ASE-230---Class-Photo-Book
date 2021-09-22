@@ -3,10 +3,16 @@
 	<?php
 		require("json_util.php");
 		function modifyPerson(){
+			//stores JSON file information into an associative array. 
 			$file = readJSON("class.json");
+			//grabs the index of the $masterArray from the query string in the URL so that
+			//the function knows which element of the array is being edited. 
 			$index = $_GET['index'];
+			//conditional is used to check if the provided index is valid.
 			if($index <= count($file) && $index >= 0){
+				//changes the name of the specified person to the name provided in the URL's query string
 				$file[$index]["name"] = $_GET['name'];
+				//Function is used to save the new array information to the class.json file
 				saveJSON($file, "class.json");
 				return "The name of the User at index ".$_GET['index']." has been changed to ".$_GET['name'].".";
 			} 

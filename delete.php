@@ -3,9 +3,14 @@
 	<?php
 		require("json_util.php");
 		function deletePerson($index){
+			//stores JSON file information into an associative array. 
 			$file = readJSON("class.json");
+			//The if condition is making sure the provided index is valid. 
 			if($index < count($file) && $index >= 0){
+				//Splice array is used to delete the element in the array specified by the index
+				//provided in the function. 
 				array_splice($file, $index, 1);
+				//function is used to save the edited array information to the JSON file. 
 				saveJSON($file, "class.json");
 				return "User at index ".$_GET['index']." has been removed."; } 
 			else { return "ERROR: Please enter a valid index!"; }

@@ -3,11 +3,15 @@
 	<?php 
 		require('functions.php');
 		require('json_util.php');
+		//reads a json file and stores that information into an associative array. 
 		$masterArray = readJSON('class.json');
+		//gets an index number from the query string in the URL. 
 		$i = $_GET["index"];
+		//sets certain variables to a person's date of birth based on the index they're located in the masterArray
 		[$ageYear, $ageMonth, $ageDay] = calculateAge($masterArray[$i]["DOB"]);
 	?>
 	<head>
+		<!--Targets the name of a specific person in the masterArray based on the index provided-->
 		<title>ASE 230 - <?=$masterArray[$i]['name']?></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -50,6 +54,7 @@
 						
 					<!--Column 1-->
 					<div class="col-md-4 col-sm-6 col-xs-12" style="">
+						<!--Uses the specified person's image provided in the masterArray-->
 						<img class="z-depth-2" alt="100x100" src="<?=$masterArray[$i]["img"]?>" style="width: 220px; margin-bottom: 12px; border: solid black 3px;">
 						<p class="textlb" style="font-size: 20px;">Contact Information</p>
 						<a href="<?=$masterArray[$i]['linkedIn']?>"><img src="images/linkedin.png" alt="40x40" class="iconImg"></a>
@@ -82,6 +87,8 @@
 					<div class="col-md-3 col-sm-12 col-xs-12">
 						<div class="" style="padding-left: 15px;">
 							<p class="textlb" style="font-size: 20px;">Technical Skills</p>
+							<!--Loop that loops through the masterArray to grab information about a person's skills-->
+							<!--These skills are displayed along with a progress bar that has those skills' values.-->
 							<?php foreach($masterArray[$i]["skills"] as $skill) { ?>
 								<p class="textw"><?=$skill["name"],": "?></p>
 								<div class="progress">
