@@ -26,8 +26,25 @@
 			<div class="" style="margin-left: 15%; margin-right: 15%;">
 				
 				<!--Name Title Bar-->
-				<div class="textlb" style="padding-left: 10px;"><p style="font-size: 70px; margin-left: -10px;"><?=$masterArray[$i]['name']?></p></div>
-
+				<div class="row">
+					
+					<!--Name Title-->
+					<div class="col-md-8 col-sm-12 col-xs-12 textlb" style="padding-left: 10px;"><p style="font-size: 70px; margin-left: -10px;"><?=$masterArray[$i]['name']?></p></div>
+					
+					<!--Modify User Button-->
+					<div class="col-md-2 col-sm-12 col-xs-12">
+						<div class="rounded green" style="text-align: center; width: 200px; padding: 10px;">
+							<a href="modify.php?index=<?=$i?>&name=Lewis" class="textw" style="font-size: 130%;">Modify User</a>
+						</div>
+					</div>
+					
+					<!--Delete User Button-->
+					<div class="col-md-2 col-sm-12 col-xs-12">
+						<div class="rounded red" style="text-align: center; width: 200px; padding: 10px;">
+							<a href="delete.php?index=<?=$i?>" class="textw" style="font-size: 130%;">Delete User</a>
+						</div>
+					</div>
+				</div>
 				<!--Column Container-->
 				<div class="row" style="">
 						
@@ -74,13 +91,13 @@
 						</div>
 					</div>
 				</div>
+				<div class="rounded dg" style="text-align: center; margin-left: 40%; margin-right: 40%; padding: 10px; width: 160px;">
+					<a href="index.php" class="textlb" style="font-size: 130%;">Back to Home</a>
+				</div>
 			</div>
 		</div>
-		<h5><a href="index.php"><?=" Back To Home ";?></a></h5>
-		<h5><a href="modify.php?index=<?=$i?>&name=Lewis"><?=" Modify Person ";?></a></h5>
-		<h5><a href="delete.php?index=<?=$i?>"><?=" Delete Person ";?></a></h5>
 		
 		<!--Footer Bar-->
-		<div class="lb" style="padding: 10px; margin-top: 5px; height: 20px;"><h1 style=""></h1></div>
+		<div class="lb" style="padding: 10px; margin-top: 15px; height: 20px;"><h1 style=""></h1></div>
 	</body>
 </html>
