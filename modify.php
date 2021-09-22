@@ -2,11 +2,11 @@
 <?php
 require("json_util.php");
 function modifyPerson(){
-	$file = readJSON("classtest.json");
+	$file = readJSON("class.json");
 	$index = $_GET['index'];
 	if($index <= count($file) && $index >= 0){
 		$file[$index]["name"] = "Beethoven";
-		saveJSON($file, "classtest.json");
+		saveJSON($file, "class.json");
 		return "User's name has been changed to Beethoven";
 	} else {
 		return "Please modify a valid user";
