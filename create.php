@@ -27,6 +27,9 @@
 			<div class="textlb" style="margin-left: 15%; margin-right: 15%; padding-left: 10px;"><p style="font-size: 50px; margin-left: -10px; height: 503px;"><?php echo createPerson(0);?></p></div>
 		</div>
 		
+		<div class="rounded dg" style="text-align: center; margin-left: 40%; margin-right: 40%; padding: 10px; width: 160px;">
+			<a href="index.php" class="textlb" style="font-size: 130%;">Back to Home</a>
+		</div>
 		<!--Footer Bar Div-->
 		<div class="" style="position: absolute; left: 0; right: 0; bottom: 0; padding: 10px; background-color: #4bcfed; margin-top: 5px; height: 20px;"><h1 style=""></h1></div>
 	</body>
