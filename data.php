@@ -225,7 +225,7 @@
 	"skills"=>[
 		["name"=>"Splunk", "value"=>"80"],
 		["name"=>"Information Technologies", "value"=>"90"],
-		["name"=>"Java", "value"=>"0"]
+		["name"=>"Java", "value"=>"20"]
 	]],
 
 	[
