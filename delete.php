@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html lang="eng">
-	<?php
+	<?php 
 		require("json_util.php");
 		function deletePerson($index){
 			//stores JSON file information into an associative array. 
